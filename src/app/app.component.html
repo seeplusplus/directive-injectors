@@ -1,0 +1,15 @@
+<number-display evenNumbers [withMax]="max" ></number-display>
+
+<div>Current max: {{ max }}</div>
+<div>
+  <label>Scaling factor: <input type="number" [(ngModel)]="scaleFactor"></label>
+</div>
+<div>
+  <button (click)="increaseMax()">Click to increase max by {{scaleFactor}}x</button>
+</div>
+
+<number-display powersOfTwo [onlyMersenne]="onlyMersenne" ></number-display>
+
+<div>
+  <label><input type="checkbox" [(ngModel)]="onlyMersenne">Only show mersenne powers of two</label>
+</div>
